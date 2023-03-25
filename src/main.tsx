@@ -1,7 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import { store } from 'lib/store/store';
 import { Layout, NewsDetail, NewsList } from 'lib/pages';
+import { Theme, GlobalStyles } from 'lib/styles';
 
 const routes = [
   {
@@ -23,7 +26,12 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>
+  <Provider store={store}>
+    <Theme>
+      <GlobalStyles />
+      <React.StrictMode>
+        <RouterProvider router={router} />
+      </React.StrictMode>
+    </Theme>
+  </Provider>
 );
