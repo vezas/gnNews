@@ -4,6 +4,8 @@ declare module 'styled-components' {
   export interface DefaultTheme {
     sharedColors: {
       accent: string;
+      white: string;
+      black: string;
     };
     colors: {
       background: string;
@@ -18,12 +20,18 @@ declare module 'styled-components' {
       weightSemiLight: number;
       weightSemiBold: number;
       weightBold: number;
+      sizeXSmall: string;
+      sizeSmall: string;
+      sizeMedium: string;
+      sizeLarge: string;
+      sizeXLarge: string;
     };
     layout: {
-      gapElementsLittle: string;
-      gapElementsSmall: string;
-      gapElementsMedium: string;
-      gapElementsBig: string;
+      gapLittle: string;
+      gapSmall: string;
+      gapMedium: string;
+      gapBig: string;
+      radius: string;
     };
   }
 }

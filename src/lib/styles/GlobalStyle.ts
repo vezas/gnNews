@@ -21,5 +21,11 @@ export const GlobalStyles = createGlobalStyle<{ theme: DefaultTheme }>`
 
   a {
   text-decoration: none;
+
+  &:focus-visible {
+    outline: 1px solid ${({ theme }) => theme.sharedColors.accent};
+    outline-offset: ${({ theme }) => theme.layout.gapLittle};
+    border-radius: ${({ theme }) => theme.layout.radius};
+  }
 }
 `;

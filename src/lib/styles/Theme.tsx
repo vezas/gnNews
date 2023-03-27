@@ -5,7 +5,9 @@ import { RootState } from 'lib/store';
 
 const sharedTheme = {
   sharedColors: {
-    accent: 'hsl(296, 75%, 25.5%)'
+    accent: 'hsl(296, 75%, 25.5%)',
+    white: 'hsl(0, 0%, 100%)',
+    black: 'hsl(0, 0%, 0%)'
   },
   font: {
     familyPrimary: '"Roboto", sans-serif',
@@ -13,13 +15,19 @@ const sharedTheme = {
     weightLight: 300,
     weightSemiLight: 400,
     weightSemiBold: 700,
-    weightBold: 900
+    weightBold: 900,
+    sizeXSmall: '0.8rem',
+    sizeSmall: '1rem',
+    sizeMedium: '1.5rem',
+    sizeLarge: '3rem',
+    sizeXLarge: '4rem'
   },
   layout: {
-    gapElementsLittle: '0.5rem',
-    gapElementsSmall: '1.5rem',
-    gapElementsMedium: '3rem',
-    gapElementsBig: '5rem'
+    gapLittle: '0.5rem',
+    gapSmall: '1.5rem',
+    gapMedium: '3rem',
+    gapBig: '5rem',
+    radius: '5px'
   }
 };
 
@@ -48,7 +56,7 @@ interface ThemeProviderProps {
 }
 
 export const Theme: FC<ThemeProviderProps> = ({ children }) => {
-  const isDarkTheme = useSelector((state: RootState) => state.ui.darkTheme);
+  const isDarkTheme = useSelector(({ ui }: RootState) => ui.darkTheme);
 
   return <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>{children}</ThemeProvider>;
 };
