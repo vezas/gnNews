@@ -1,10 +1,13 @@
 import { FC } from 'react';
 import { Outlet } from 'react-router-dom';
-import { Header } from 'lib/components/Layout';
+import { Header, SideMenu } from 'lib/components/Layout';
 
 export const Layout: FC = () => (
   <>
     <Header />
-    <Outlet />
+    <SideMenu />
+    <main>
+      <Outlet />
+    </main>
   </>
 );
