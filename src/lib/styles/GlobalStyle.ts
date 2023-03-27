@@ -31,7 +31,7 @@ export const GlobalStyles = createGlobalStyle<{ theme: DefaultTheme }>`
 #root {
   min-height: 100vh;
   display: grid;
-  grid-template-rows: 10vh 80vh 10vh;
+  grid-template-rows: 10vh 85vh 5vh;
   grid-template-columns: min-content 1fr;
   grid-template-areas: 
   'header header'

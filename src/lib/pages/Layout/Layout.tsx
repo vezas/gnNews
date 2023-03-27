@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { Outlet } from 'react-router-dom';
-import { Header, SideMenu } from 'lib/components/Layout';
+import { Footer, Header, SideMenu } from 'lib/components/Layout';
 
 export const Layout: FC = () => (
   <>
@@ -9,5 +9,6 @@ export const Layout: FC = () => (
     <main>
       <Outlet />
     </main>
+    <Footer />
   </>
 );
