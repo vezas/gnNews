@@ -11,14 +11,13 @@ declare module 'styled-components' {
       background: string;
       backgroundDark: string;
       font: string;
-      fontDark: string;
+      fontSecondary: string;
+      shadowColor: string;
     };
     font: {
       familyPrimary: string;
-      familySecondary: string;
       weightLight: number;
-      weightSemiLight: number;
-      weightSemiBold: number;
+      weightNormal: number;
       weightBold: number;
       sizeXSmall: string;
       sizeSmall: string;

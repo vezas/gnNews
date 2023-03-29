@@ -10,12 +10,10 @@ const sharedTheme = {
     black: 'hsl(0, 0%, 0%)'
   },
   font: {
-    familyPrimary: '"Roboto", sans-serif',
-    familySecondary: '"Ubuntu", sans-serif',
+    familyPrimary: '"Montserrat", sans-serif',
     weightLight: 300,
-    weightSemiLight: 400,
-    weightSemiBold: 700,
-    weightBold: 900,
+    weightNormal: 400,
+    weightBold: 700,
     sizeXSmall: '0.8rem',
     sizeSmall: '1rem',
     sizeMedium: '1.5rem',
@@ -33,10 +31,11 @@ const sharedTheme = {
 
 const darkTheme: DefaultTheme = {
   colors: {
-    background: 'hsl(217, 8.5%, 18.5%)',
-    backgroundDark: 'hsl(220, 10.5%, 11%)',
+    background: 'hsl(0, 0%, 17%)',
+    backgroundDark: 'hsl(0, 0%, 12%)',
     font: 'hsl(0, 0%, 100%)',
-    fontDark: 'hsl(0, 2.298850574712635%, 65.88235294117646%)'
+    fontSecondary: 'hsl(0, 2.298850574712635%, 65.88235294117646%)',
+    shadowColor: 'hsl( 0 0 100% / 0.5)'
   },
   ...sharedTheme
 };
@@ -46,7 +45,8 @@ const lightTheme: DefaultTheme = {
     background: 'hsl(0, 0%, 100%)',
     backgroundDark: 'hsl(0, 1.408450704225387%, 86.07843137254902%)',
     font: 'hsl(0, 0%, 0%)',
-    fontDark: 'hsl(0, 0.5%, 20%)'
+    fontSecondary: 'hsl(0, 0.5%, 20%)',
+    shadowColor: 'hsl( 0 0 0% / 0.5)'
   },
   ...sharedTheme
 };

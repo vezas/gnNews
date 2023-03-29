@@ -11,7 +11,7 @@ export const GlobalStyles = createGlobalStyle<{ theme: DefaultTheme }>`
   html {
     box-sizing: border-box;
     font-size: 62.5%;
-    font-weight: ${({ theme }) => theme.font.weightLight};
+    font-weight: ${({ theme }) => theme.font.weightNormal};
     font-family: ${({ theme }) => theme.font.familyPrimary};
 
     @media ${devices.tablet} {
@@ -25,18 +25,34 @@ export const GlobalStyles = createGlobalStyle<{ theme: DefaultTheme }>`
 
   body {
   min-height: 100vh;
-  background-color: ${({ theme }) => theme.colors.backgroundDark}
+  background-color: ${({ theme }) => theme.colors.backgroundDark};
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 #root {
   min-height: 100vh;
   display: grid;
-  grid-template-rows: 10vh 85vh 5vh;
+  grid-template-rows: 7.5vh 87.5vh 5vh;
   grid-template-columns: min-content 1fr;
   grid-template-areas: 
   'header header'
   'side-menu content'
-  'footer footer'
+  'footer footer';
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
   a {
