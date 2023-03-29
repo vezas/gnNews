@@ -20,3 +20,4 @@ const createAxiosInstance = (baseURL: string) => {
 };
 
 export const countriesApi = createAxiosInstance('https://restcountries.com/v3.1/');
+export const newsApi = createAxiosInstance('https://newsapi.org/v2/');

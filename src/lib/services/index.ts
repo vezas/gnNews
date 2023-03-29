@@ -1,1 +1,1 @@
-export { countriesApi } from './api.service';
+export { countriesApi, newsApi } from './api.service';

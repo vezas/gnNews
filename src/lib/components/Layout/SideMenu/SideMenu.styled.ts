@@ -24,7 +24,6 @@ export const StyledList = styled.ul`
 export const StyledListItem = styled.li`
   font-size: ${({ theme }) => theme.font.sizeSmall};
   color: ${({ theme }) => theme.colors.font};
-  border-bottom: 1px solid ${({ theme }) => theme.sharedColors.accent};
   transition: border-bottom 100ms ease-in-out, transform 100ms ease-in-out;
 
   &:hover {
@@ -34,6 +33,7 @@ export const StyledListItem = styled.li`
   &:has(> a.active) {
     transform: scale(1.15);
     border-bottom: 1px solid ${({ theme }) => theme.colors.font};
+    font-weight: ${({ theme }) => theme.font.weightNormal};
   }
 
   & > a {
@@ -50,6 +50,7 @@ export const StyledListItem = styled.li`
     & > img {
       object-fit: cover;
       width: 100%;
+      height: 100%;
     }
   }
 `;

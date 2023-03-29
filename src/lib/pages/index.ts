@@ -1,3 +1,2 @@
 export { Layout } from './Layout';
-export { NewsList } from './NewsList';
-export { NewsDetail } from './NewsDetail';
+export { NewsList, loader } from './NewsList';

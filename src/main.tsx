@@ -5,20 +5,9 @@ import { Provider } from 'react-redux';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { store } from 'lib/store/store';
-import { Layout, NewsDetail, NewsList } from 'lib/pages';
+import { Layout, NewsList, loader as newsListLoader } from 'lib/pages';
 import { loader as layoutLoader } from 'lib/components/Layout';
 import { Theme, GlobalStyles } from 'lib/styles';
-
-const routes = [
-  {
-    path: '/country/:countryId',
-    element: <NewsList />
-  },
-  {
-    path: '/country/:countryId/:newsId',
-    element: <NewsDetail />
-  }
-];
 
 const router = createBrowserRouter([
   {
@@ -26,7 +15,13 @@ const router = createBrowserRouter([
     element: <Layout />,
     loader: layoutLoader,
     errorElement: <ToastContainer />,
-    children: routes.map(({ path, element }) => ({ path, element }))
+    children: [
+      {
+        path: '/country/:countryId',
+        element: <NewsList />,
+        loader: newsListLoader
+      }
+    ]
   }
 ]);
 

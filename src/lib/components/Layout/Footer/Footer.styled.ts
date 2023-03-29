@@ -6,7 +6,7 @@ export const StyledFooter = styled.footer`
   justify-content: flex-end;
   align-items: center;
   background-color: ${({ theme }) => theme.colors.background};
-  border-top: 1px solid ${({ theme }) => theme.sharedColors.accent};
+  box-shadow: 0 -5px 5px 0 rgba(0 0 0, 0.5);
 
   grid-area: footer;
 `;
