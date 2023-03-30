@@ -1,15 +1,15 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 interface UIState {
-  darkTheme: boolean;
+  themeMode: string;
   isModalOpened: boolean;
-  variant: 'list' | 'tiles';
+  variant: string;
 }
 
 const initialState: UIState = {
-  darkTheme: false,
+  themeMode: localStorage.getItem('themeMode') || 'dark',
   isModalOpened: false,
-  variant: 'list'
+  variant: localStorage.getItem('listVariant') || 'list'
 };
 
 export const uiSlice = createSlice({
@@ -17,13 +17,15 @@ export const uiSlice = createSlice({
   initialState,
   reducers: {
     toggleTheme: (state) => {
-      state.darkTheme = !state.darkTheme;
+      state.themeMode = state.themeMode === 'dark' ? 'light' : 'dark';
+      localStorage.setItem('themeMode', state.themeMode);
     },
     toggleModal: (state) => {
       state.isModalOpened = !state.isModalOpened;
     },
     toggleListVariant: (state) => {
       state.variant = state.variant === 'list' ? 'tiles' : 'list';
+      localStorage.setItem('listVariant', state.variant);
     }
   }
 });

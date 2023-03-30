@@ -12,7 +12,7 @@ import { StyledHeader, StyledList, ToggleButton } from './Header.styled';
 
 export const Header: FC = () => {
   const dispatch = useDispatch();
-  const isDarkTheme = useSelector(({ ui }: RootState) => ui.darkTheme);
+  const isDarkTheme = useSelector(({ ui }: RootState) => ui.themeMode);
   const variant = useSelector(({ ui }: RootState) => ui.variant);
 
   const changeTheme = () => dispatch(toggleTheme());

@@ -56,7 +56,11 @@ interface ThemeProviderProps {
 }
 
 export const Theme: FC<ThemeProviderProps> = ({ children }) => {
-  const isDarkTheme = useSelector(({ ui }: RootState) => ui.darkTheme);
+  const themeMode = useSelector(({ ui }: RootState) => ui.themeMode);
 
-  return <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>{children}</ThemeProvider>;
+  console.log(themeMode);
+
+  return (
+    <ThemeProvider theme={themeMode === 'dark' ? darkTheme : lightTheme}>{children}</ThemeProvider>
+  );
 };
