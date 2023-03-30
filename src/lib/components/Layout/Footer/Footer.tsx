@@ -11,8 +11,8 @@ export const Footer: FC = () => {
 
   return (
     <StyledFooter>
-      <StyledParagraph>Total amount of articles: {articlesAmount}</StyledParagraph>
       <StyledParagraph>{clock}</StyledParagraph>
+      <StyledParagraph>Total amount of articles: {articlesAmount}</StyledParagraph>
     </StyledFooter>
   );
 };
