@@ -2,14 +2,16 @@ import { FC } from 'react';
 import { useSelector } from 'react-redux';
 import { newsApi } from 'lib/services';
 import { LoaderFunctionArgs, useLoaderData } from 'react-router-dom';
-import { NewsItem } from './NewsItem';
+import { NewsItem } from 'lib/components/NewsItem';
 import { Wrapper } from './NewsList.styled';
 import { RootState } from 'lib/store';
+import { dataFormatter } from 'lib/utils';
 
 interface IArticle {
   title: string;
   publishedAt: string;
   url: string;
+  urlToImage: string;
   author: string;
 }
 
@@ -23,15 +25,20 @@ export const NewsList: FC = () => {
 
   return (
     <Wrapper variant={variant}>
-      {data.articles.map(({ title, publishedAt, url: sourceUrl, author }) => (
-        <NewsItem
-          key={title}
-          title={title}
-          author={author}
-          sourceUrl={sourceUrl}
-          publishedAt={publishedAt}
-        />
-      ))}
+      {data.articles.map(({ title, publishedAt, url: sourceUrl, author, urlToImage }) => {
+        const date = dataFormatter(publishedAt);
+        return (
+          <NewsItem
+            key={title}
+            title={title}
+            author={author}
+            sourceUrl={sourceUrl}
+            publishedAt={date}
+            imgUrl={urlToImage}
+            variant={variant}
+          />
+        );
+      })}
     </Wrapper>
   );
 };
