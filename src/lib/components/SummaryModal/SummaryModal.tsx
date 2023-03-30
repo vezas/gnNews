@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { RootState, toggleModal } from 'lib/store';
-import { StyledModal, ToggleButton } from 'lib/components/UI';
+import { ToggleButton, StyledModal } from 'lib/components/UI';
 import { Heading, StyledParagraph } from 'lib/components/Typography';
 import { ReactComponent as CloseIcon } from 'lib/assets/close-square.svg';
 import { difficulties, funs } from './data';
@@ -13,7 +13,7 @@ export const SummaryModal: FC = () => {
   const closeModal = () => dispatch(toggleModal(false));
 
   return (
-    <StyledModal mouseLeaveDelay={500} modal open={isModalOpened} onClose={closeModal}>
+    <StyledModal modal open={isModalOpened} onClose={closeModal}>
       <ContentGroup>
         <Heading level='h3'>Summary</Heading>
         <ToggleButton onClick={closeModal}>
