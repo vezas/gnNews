@@ -1,2 +1,2 @@
-export { StyledButton as Button } from './Button';
-export { StyledModal, StyledCloseButton } from './Modal';
+export { StyledButton as Button, ToggleButton } from './Button';
+export { StyledModal } from './Modal';

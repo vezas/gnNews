@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 interface UIState {
   themeMode: string;
@@ -20,8 +20,8 @@ export const uiSlice = createSlice({
       state.themeMode = state.themeMode === 'dark' ? 'light' : 'dark';
       localStorage.setItem('themeMode', state.themeMode);
     },
-    toggleModal: (state) => {
-      state.isModalOpened = !state.isModalOpened;
+    toggleModal: (state, action: PayloadAction<boolean>) => {
+      state.isModalOpened = action.payload;
     },
     toggleListVariant: (state) => {
       state.variant = state.variant === 'list' ? 'tiles' : 'list';

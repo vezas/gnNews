@@ -10,7 +10,7 @@ interface NewsItemProps {
   sourceUrl: string;
   publishedAt: string;
   imgUrl: string;
-  variant: 'list' | 'tiles';
+  variant: string;
 }
 
 export const NewsItem: FC<NewsItemProps> = ({

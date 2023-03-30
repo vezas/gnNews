@@ -58,8 +58,6 @@ interface ThemeProviderProps {
 export const Theme: FC<ThemeProviderProps> = ({ children }) => {
   const themeMode = useSelector(({ ui }: RootState) => ui.themeMode);
 
-  console.log(themeMode);
-
   return (
     <ThemeProvider theme={themeMode === 'dark' ? darkTheme : lightTheme}>{children}</ThemeProvider>
   );

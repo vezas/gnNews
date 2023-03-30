@@ -15,15 +15,3 @@ export const StyledModal = styled(Popup)`
     border-radius: ${({ theme }) => theme.layout.radius};
   }
 `;
-
-export const StyledCloseButton = styled.button`
-  background-color: transparent;
-  border: none;
-  width: 1em;
-  height: 1em;
-
-  & > svg {
-    width: 1em;
-    height: 1em;
-  }
-`;

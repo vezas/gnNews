@@ -1,1 +1,1 @@
-export { StyledModal, StyledCloseButton } from './Modal.styled';
+export { StyledModal } from './Modal.styled';
