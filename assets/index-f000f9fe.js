@@ -399,4 +399,4 @@ Error generating stack: `+i.message+`
     border-radius: ${({theme:e})=>e.layout.radius};
   }
 }
-`,OC=_w([{path:"/",element:D.jsx(pC,{}),loader:rC,errorElement:D.jsx(Wu,{}),children:[{path:"/country/:countryId",element:D.jsx(EC,{}),loader:xC}]}]);Vs.createRoot(document.getElementById("root")).render(D.jsx(_S,{store:$E,children:D.jsxs(PC,{children:[D.jsx(RC,{}),D.jsx(J.StrictMode,{children:D.jsx(gw,{router:OC})})]})}));
+`,OC=_w([{path:"/gnNews",element:D.jsx(pC,{}),loader:rC,errorElement:D.jsx(Wu,{}),children:[{path:"gnNews/country/:countryId",element:D.jsx(EC,{}),loader:xC}]}]);Vs.createRoot(document.getElementById("root")).render(D.jsx(_S,{store:$E,children:D.jsxs(PC,{children:[D.jsx(RC,{}),D.jsx(J.StrictMode,{children:D.jsx(gw,{router:OC})})]})}));
