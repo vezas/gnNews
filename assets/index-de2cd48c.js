@@ -263,7 +263,7 @@ Error generating stack: `+i.message+`
     border-radius: 50%;
     background-color: ${({theme:e})=>e.colors.font};
   }
-`,dC=()=>{const e=co(({ui:r})=>r.isModalOpened),t=pf(),n=()=>t(W0(!1));return D.jsx(iv,{modal:!0,open:e,onClose:n,children:D.jsxs(cC,{children:[D.jsx(Zr,{level:"h3",children:"Summary"}),D.jsx(nc,{onClick:n,children:D.jsx(aC,{})}),D.jsxs(fC,{children:[D.jsxs("div",{children:[D.jsx(Zr,{level:"h4",children:"Difficulties"}),D.jsx(Vp,{children:sC.map(r=>D.jsx(mr,{as:"li",children:r},r))})]}),D.jsxs("div",{children:[D.jsx(Zr,{level:"h4",children:"Funs"}),D.jsx(Vp,{children:uC.map(r=>D.jsx(mr,{as:"li",children:r},r))})]})]})]})})},pC=()=>D.jsxs(D.Fragment,{children:[D.jsx(b2,{}),D.jsx(nC,{}),D.jsx("main",{children:D.jsx(ww,{})}),D.jsx(lC,{}),D.jsx(dC,{})]}),hC="/assets/no-pictures-d690f554.png",mC=Ze.article`
+`,dC=()=>{const e=co(({ui:r})=>r.isModalOpened),t=pf(),n=()=>t(W0(!1));return D.jsx(iv,{modal:!0,open:e,onClose:n,children:D.jsxs(cC,{children:[D.jsx(Zr,{level:"h3",children:"Summary"}),D.jsx(nc,{onClick:n,children:D.jsx(aC,{})}),D.jsxs(fC,{children:[D.jsxs("div",{children:[D.jsx(Zr,{level:"h4",children:"Difficulties"}),D.jsx(Vp,{children:sC.map(r=>D.jsx(mr,{as:"li",children:r},r))})]}),D.jsxs("div",{children:[D.jsx(Zr,{level:"h4",children:"Funs"}),D.jsx(Vp,{children:uC.map(r=>D.jsx(mr,{as:"li",children:r},r))})]})]})]})})},pC=()=>D.jsxs(D.Fragment,{children:[D.jsx(b2,{}),D.jsx(nC,{}),D.jsx("main",{children:D.jsx(ww,{})}),D.jsx(lC,{}),D.jsx(dC,{})]}),hC="/gnNews/assets/no-pictures-d690f554.png",mC=Ze.article`
   padding: ${({theme:e})=>e.layout.gapLittle};
   background-color: ${({theme:e})=>e.colors.background};
   border-radius: ${({theme:e})=>e.layout.radius};
