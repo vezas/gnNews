@@ -11,13 +11,13 @@ import { Theme, GlobalStyles } from 'lib/styles';
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: '/gnNews',
     element: <Layout />,
     loader: layoutLoader,
     errorElement: <ToastContainer />,
     children: [
       {
-        path: '/country/:countryId',
+        path: 'gnNews/country/:countryId',
         element: <NewsList />,
         loader: newsListLoader
       }
