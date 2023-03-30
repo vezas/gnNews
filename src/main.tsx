@@ -9,15 +9,17 @@ import { Layout, NewsList, loader as newsListLoader } from 'lib/pages';
 import { loader as layoutLoader } from 'lib/components/Layout';
 import { Theme, GlobalStyles } from 'lib/styles';
 
+const baseURL = `${import.meta.env.VITE_BASE_URL}`;
+
 const router = createBrowserRouter([
   {
-    path: '/gnNews',
+    path: baseURL,
     element: <Layout />,
     loader: layoutLoader,
     errorElement: <ToastContainer />,
     children: [
       {
-        path: 'gnNews/country/:countryId',
+        path: `${baseURL}/country/:countryId`,
         element: <NewsList />,
         loader: newsListLoader
       }

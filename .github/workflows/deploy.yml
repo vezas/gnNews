@@ -8,6 +8,10 @@ on:
 permissions:
   contents: write
 
+env:
+  VITE_API_KEY: ${{secrets.VITE_API_KEY}}
+  VITE_BASE_URL: ${{secrets.VITE_BASE_URL}}
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
