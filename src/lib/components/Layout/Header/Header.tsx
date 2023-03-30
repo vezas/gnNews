@@ -4,10 +4,10 @@ import { useSelector, useDispatch } from 'react-redux';
 import { RootState, toggleTheme, toggleModal, toggleListVariant } from 'lib/store';
 import { Heading } from 'lib/components/Typography';
 import { Button, ToggleButton } from 'lib/components/UI';
-import { ReactComponent as SunIcon } from 'lib/assets/sun.svg';
-import { ReactComponent as MoonIcon } from 'lib/assets/moon.svg';
-import { ReactComponent as TilesIcon } from 'lib/assets/tiles.svg';
-import { ReactComponent as ListIcon } from 'lib/assets/list.svg';
+import { ReactComponent as SunIcon } from 'lib/assets/svg/sun.svg';
+import { ReactComponent as MoonIcon } from 'lib/assets/svg/moon.svg';
+import { ReactComponent as TilesIcon } from 'lib/assets/svg/tiles.svg';
+import { ReactComponent as ListIcon } from 'lib/assets/svg/list.svg';
 import { StyledHeader, StyledList } from './Header.styled';
 
 export const Header: FC = () => {

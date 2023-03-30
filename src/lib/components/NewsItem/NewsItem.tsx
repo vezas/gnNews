@@ -1,7 +1,7 @@
 import { FC, useState } from 'react';
 import { Heading, StyledParagraph } from 'lib/components/Typography';
 import { StyledModal } from 'lib/components/UI';
-import NoPicutesIcon from 'lib/assets/no-pictures.png';
+import NoPicutesIcon from 'lib/assets/images/no-pictures.png';
 import { DetailCard, DetailsGroup } from './NewsItem.styled';
 
 interface NewsItemProps {
@@ -36,7 +36,7 @@ export const NewsItem: FC<NewsItemProps> = ({
           <StyledParagraph color='secondary'>{publishedAt}</StyledParagraph>
         </DetailsGroup>
 
-        <StyledModal open={isModalOpened} onClose={closeModal}>
+        <StyledModal modal open={isModalOpened} onClose={closeModal}>
           {imgUrl && <img src={imgUrl} alt='Article image' />}
           <Heading level='h2'>{title}</Heading>
           <DetailsGroup>
