@@ -5,6 +5,7 @@ export const StyledFooter = styled.footer`
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  gap: ${({ theme }) => theme.layout.gapBig};
   background-color: ${({ theme }) => theme.colors.background};
   box-shadow: 0 -5px 5px 0 rgba(0 0 0, 0.5);
 

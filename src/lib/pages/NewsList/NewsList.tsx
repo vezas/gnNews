@@ -1,11 +1,11 @@
-import { FC } from 'react';
-import { useSelector } from 'react-redux';
-import { newsApi } from 'lib/services';
+import { FC, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { LoaderFunctionArgs, useLoaderData } from 'react-router-dom';
+import { newsApi } from 'lib/services';
+import { RootState, setArticleAmount } from 'lib/store';
 import { NewsItem } from 'lib/components/NewsItem';
-import { Wrapper } from './NewsList.styled';
-import { RootState } from 'lib/store';
 import { dataFormatter } from 'lib/utils';
+import { Wrapper } from './NewsList.styled';
 
 interface IArticle {
   title: string;
@@ -22,6 +22,11 @@ interface IResponse {
 export const NewsList: FC = () => {
   const variant = useSelector(({ ui }: RootState) => ui.variant);
   const data = useLoaderData() as IResponse;
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(setArticleAmount(data.articles.length));
+  }, [data]);
 
   return (
     <Wrapper variant={variant}>
