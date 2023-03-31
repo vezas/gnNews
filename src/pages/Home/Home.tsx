@@ -5,6 +5,6 @@ import { Wrapper } from './Home.styled';
 export const Home: FC = () => (
   <Wrapper>
     <Heading level='h3'>Welcome to the gnNews</Heading>
-    <StyledParagraph>Choose your country for dispaly news</StyledParagraph>
+    <StyledParagraph>Choose your country to display news</StyledParagraph>
   </Wrapper>
 );
