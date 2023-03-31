@@ -19,7 +19,7 @@ const router = createBrowserRouter([
     loader: layoutLoader,
     errorElement: <ToastContainer />,
     children: [
-      { path: '/', element: <Home /> },
+      { path: baseURL, element: <Home /> },
       {
         path: `${baseURL}/country/:countryId`,
         element: <NewsList />,
