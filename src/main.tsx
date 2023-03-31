@@ -6,7 +6,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { APP_CONFIG } from 'lib/config';
 import { store } from 'lib/store/store';
-import { Layout, NewsList, loader as newsListLoader } from 'lib/pages';
+import { Layout, NewsList, loader as newsListLoader } from 'pages';
 import { loader as layoutLoader } from 'lib/components/Layout';
 import { Theme, GlobalStyles } from 'lib/styles';
 

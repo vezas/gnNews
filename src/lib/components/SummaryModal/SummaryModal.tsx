@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { RootState, toggleModal } from 'lib/store';
 import { ToggleButton, StyledModal } from 'lib/components/UI';
 import { Heading, StyledParagraph } from 'lib/components/Typography';
-import { ReactComponent as CloseIcon } from 'lib/assets/svg/close-square.svg';
+import { ReactComponent as CloseIcon } from 'assets/svg/close-square.svg';
 import { difficulties, funs } from './data';
 import { ContentGroup, StyledList, SummaryGroup } from './SummaryModal.styled';
 

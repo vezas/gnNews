@@ -1,7 +1,7 @@
 import { FC, useState } from 'react';
 import { Heading, StyledParagraph } from 'lib/components/Typography';
 import { StyledModal } from 'lib/components/UI';
-import NoPicutesIcon from 'lib/assets/images/no-pictures.png';
+import NoPicutesIcon from 'assets/images/no-pictures.png';
 import { ContentGroup, DetailCard, DetailsGroup, StyledLink } from './NewsItem.styled';
 
 interface NewsItemProps {
