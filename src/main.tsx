@@ -4,12 +4,13 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { APP_CONFIG } from 'lib/config';
 import { store } from 'lib/store/store';
 import { Layout, NewsList, loader as newsListLoader } from 'lib/pages';
 import { loader as layoutLoader } from 'lib/components/Layout';
 import { Theme, GlobalStyles } from 'lib/styles';
 
-const baseURL = `${import.meta.env.VITE_BASE_URL}`;
+const baseURL = APP_CONFIG.BASE_URL || '';
 
 const router = createBrowserRouter([
   {

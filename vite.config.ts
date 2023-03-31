@@ -1,13 +1,15 @@
-import { defineConfig, loadEnv } from 'vite';
+import { defineConfig } from 'vite';
 import tsconfigPaths from 'vite-tsconfig-paths';
 import svgr from 'vite-plugin-svgr';
 
-// https://vitejs.dev/config/
-export default defineConfig(({ mode }) => {
-  const env = loadEnv(mode, process.cwd());
+import { config as configDotEnv } from 'dotenv';
 
-  return {
-    plugins: [tsconfigPaths(), svgr()],
-    base: env.VITE_BASE_URL || '/'
-  };
+configDotEnv();
+
+export default defineConfig({
+  define: {
+    'process.env': process.env
+  },
+  plugins: [tsconfigPaths(), svgr()],
+  base: process.env.BASE_URL || '/'
 });

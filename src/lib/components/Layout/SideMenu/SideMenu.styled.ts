@@ -8,6 +8,7 @@ export const StyledSideMenu = styled.aside`
   -ms-overflow-style: none;
   scrollbar-width: none;
   overflow-y: scroll;
+  overflow-y: scroll;
 
   &::-webkit-scrollbar {
     display: none;

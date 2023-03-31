@@ -3,6 +3,7 @@ import { NavLink, useLoaderData } from 'react-router-dom';
 import { countriesApi } from 'lib/services';
 import { countriesList } from './data';
 import { StyledSideMenu, StyledList, StyledListItem } from './SideMenu.styled';
+import { APP_CONFIG } from 'lib/config';
 
 interface IResponse {
   name: { common: string };
@@ -19,7 +20,7 @@ export const SideMenu: FC = () => {
         <StyledList>
           {data.map(({ name: { common: commonName }, flags: { svg: url, alt }, cca2 }) => (
             <StyledListItem key={commonName}>
-              <NavLink to={`${import.meta.env.VITE_BASE_URL}/country/${cca2}`}>
+              <NavLink to={`${APP_CONFIG.BASE_URL}/country/${cca2}`}>
                 <img src={url} alt={alt || `${commonName} flag`} />
                 {commonName}
               </NavLink>

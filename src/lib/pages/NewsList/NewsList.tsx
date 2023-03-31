@@ -1,6 +1,7 @@
 import { FC, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { LoaderFunctionArgs, useLoaderData } from 'react-router-dom';
+import { APP_CONFIG } from 'lib/config';
 import { newsApi } from 'lib/services';
 import { RootState, setArticleAmount } from 'lib/store';
 import { NewsItem } from 'lib/components/NewsItem';
@@ -52,7 +53,6 @@ export const loader = ({ params }: LoaderFunctionArgs) => {
   const { countryId } = params;
 
   return (
-    countryId &&
-    newsApi.get(`top-headlines?country=${countryId}&apiKey=${import.meta.env.VITE_API_KEY}`)
+    countryId && newsApi.get(`top-headlines?country=${countryId}&apiKey=${APP_CONFIG.API_KEY}`)
   );
 };
